@@ -1,10 +1,20 @@
 #include<iostream>
 using namespace std;
 
-int fib(int k){
+int i=0;
+
+int fib(int k)
+{
+  static int i=1;
   if(k==0||k==1)
     return k;
-  return fib(k-1)+fib(k-2);
+  else
+  {
+    cout<<"It's the "<<i<<"-th recursive call"<<endl;
+    i = i + 1;
+    return fib(k-1)+fib(k-2);
+  }
+  
 }
 
 int main(){
