@@ -3,12 +3,23 @@
 using namespace std;
 
 
-int power(int a,int n){
+int power(int a,int n)
+{
+  static int k=1;
+  
   if(n==0)
     return 1;
+
   else if(n==1)
     return a;
-  return a * power(a,n-1);
+
+  else
+  {
+    cout<<"It's the "<<k<<"-th recursive call"<<endl;
+    k = k+1;
+    return a*power(a, n-1);
+  }
+
 }
 
 int main(){
