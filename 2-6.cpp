@@ -1,13 +1,13 @@
 #include<iostream>
 using namespace std;
 
-int i=0;
-
 int fib(int k)
 {
   static int i=1;
+  
   if(k==0||k==1)
     return k;
+  
   else
   {
     cout<<"It's the "<<i<<"-th recursive call"<<endl;
@@ -17,7 +17,8 @@ int fib(int k)
   
 }
 
-int main(){
+int main()
+{
   int j;
   cout << "please input what number you want"<<endl;
   cin >> j;
