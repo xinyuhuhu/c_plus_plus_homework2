@@ -1,4 +1,4 @@
-//  exercise5-2
+//  exercise5-2 with c style string
 //
 //  Created by Xinyu HU on 2021/2/1.
 //
@@ -8,9 +8,9 @@
 using namespace std;
 
 //judge whether a string contains only digits or not
-int repeat_times(char *str)
+int occur_times(char *str)
 {
-    int count = 0;
+    int count = 1;
     
     for (int i=0; i<sizeof(str)-1; ++i)
     {
@@ -23,7 +23,7 @@ int repeat_times(char *str)
         }
            
     }
-    return count;
+    return (count+1)/2;
 }
 
 
@@ -33,7 +33,7 @@ int main()
     cout << "Please input a string you want: ";
     cin >> str;
 
-    cout << "The number of repeat time is: " << repeat_times(str) << endl;
+    cout << "The number of all a pair of characters occurs is: " << occur_times(str) << endl;
   
     return 0;
 }
